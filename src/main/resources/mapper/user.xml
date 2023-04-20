@@ -31,4 +31,10 @@
 	<select id="findAll" resultType="com.tenco.bankexer.repository.model.User">
 		select * from user_tb
 	</select>
+	
+	<select id="findByUsernameAndPassword" resultType="com.tenco.bankexer.repository.model.User">
+		select * from user_tb
+		where id = #{id} 
+		and password = #{password}
+	</select>
 </mapper>
